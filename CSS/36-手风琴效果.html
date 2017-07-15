@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        36-手风琴效果</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            width: 960px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+        
+        ul li{
+            list-style: none;
+            width: 160px;
+            height: 300px;
+            float: left;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: width 5s;
+        }
+
+        ul li span{
+            display: inline-block;
+            width: 500px;
+            height: 300px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+
+        .box2{
+            background-color: pink;
+        }
+
+        .box3{
+            background-color: red;
+        }
+
+        .box4{
+            background-color: pink;
+        }
+
+        .box5{
+            background-color: red;
+        }
+
+        .box6{
+            background-color: pink;
+        }
+
+        ul:hover li{
+            width: 100px;
+        }
+        ul li:hover{
+            width: 460px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<ul>
+    <li><span class="box1">haha</span></li>
+    <li><span class="box2">haha</span></li>
+    <li><span class="box3">3e</span></li>
+    <li><span class="box4">2r</span></li>
+    <li><span class="box5">dg</span></li>
+    <li><span class="box6">3rf</span></li>
+</ul>
+
+</body>
+</html>

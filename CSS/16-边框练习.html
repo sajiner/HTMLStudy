@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        16-边框练习</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            border: 5px solid red;
+            /*border-width:5px;*/
+            /*border-style:solid;*/
+            /*border-color:red;*/
+        }
+
+        .box2{
+            /*border-top: 5 solid red;*/
+            /*border-right: 5px solid green;*/
+            /*border-bottom: 5px solid blue;*/
+            /*border-left: 5 solid purple;*/
+
+            border-width: 5px;
+            border-style:solid;
+            border-color: red green blue purple;
+        }
+
+        .box3{
+            border: 5px solid red;
+            border-right: 5px dashed red;
+            /* 同一个选择器中后面的边框属性会覆盖前面的属性*/
+        }
+
+        .box4{
+            border: 5px solid red;
+            border-style:solid dashed;
+        }
+
+        .box5{
+            border: 5px solid #000;
+            border-bottom:none;
+            /*none 代表不需要边框*/
+        }
+
+        .box6{
+            /*border: 20px solid #000;*/
+            width: 0;
+            height: 0;
+            border-width: 25px;
+            border-style:solid;
+            border-color: red white white white;
+            border-bottom:none;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box1">
+
+</div>
+<br>
+<div class="box2">
+    
+</div>
+<br>
+<div class="box3">
+    
+</div>
+<br>
+<div class="box4">
+    
+</div>
+<br>
+<div class="box5">
+    
+</div>
+<br>
+<div class="box6"></div>
+
+</body>
+</html>

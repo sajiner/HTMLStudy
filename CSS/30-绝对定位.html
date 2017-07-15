@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        30-绝对定位</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+
+        .box2{
+            background-color: green;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+
+        .box3{
+            background-color: blue;
+        }
+
+        .box4{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            position: absolute;
+        }
+
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /*position: absolute;*/
+        }
+
+        .box6{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+
+<!--
+绝对定位：相对于body来定位
+
+    注意：
+       1、脱离标准流
+       2、不区分块级、行内、行内块级元素
+       3、以body为参考点指得是以首屏看到的范围作为参考点，而不是整个网页的宽度和高度
+       4、绝对定位的元素会忽略父元素的padding
+
+    规律：
+        1、默认情况下所有的绝对定位的元素，无论有无祖先元素，都以body作为参考点
+        2、绝对定位的元素有祖先元素，且祖先元素也是定位流，那么这个绝对定位元素就会以定位流的祖先元素作为参考点
+            2.1 只要是绝对定位元素的祖先元素都可以
+            2.2 可适用的定位流：绝对、相对、固定
+            2.3 定位流中只有静态定位不行
+        3、如果一个绝对定位的元素有祖先元素，并且祖先元素也是定位流，且祖先元素中有多个元素都是定位流，那么这个绝对定位的元素会
+         以离它最近的那个定位流的祖先元素作为参考点
+
+     应用场景：
+
+-->
+
+<!--<div class="box1">-->
+
+<!--</div>-->
+<!--<div class="box2">-->
+
+<!--</div>-->
+<!--<div class="box3"></div>-->
+
+<!--<div class="box4">-->
+    <!--<div class="box5">-->
+        <!--<div class="box6"></div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        37-2D转换模块</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        ul{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #000;
+            margin:0 auto;
+        }
+
+        ul li {
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin:0 auto;
+            margin-top: 50px;
+        }
+
+        ul li:nth-of-type(2){
+            /*deg 代表多少度， 默认情况，所有分元素都是围绕在Z轴旋转
+                rotateZ(45deg)
+                rotateY(45deg)
+                rotateX(45deg)
+            */
+            /*-webkit-transform: rotate(45deg);*/
+            transform: rotateZ(45deg);
+        }
+
+        ul li:nth-child(3){
+            -webkit-transform: translate(0px, 10px);
+        }
+
+        ul li:nth-child(4){
+            /*如果取值是1，代表不变；如果水平和垂直缩放都一样，可以简写一个参数*/
+            /*-webkit-transform: scale(1.5, 1)*/
+            transform: scale(0.5);
+        }
+
+        ul li:nth-child(5){
+            transform: rotate(45deg) translate(50px, 0px) scale(0.5);
+        }
+
+    </style>
+
+</head>
+<body>
+
+<!--
+注意点：
+    1、进行多个转换，用空格隔开
+    2、2D的转换模块会修改元素的坐标系，旋转之后的平移就不是水平平移了
+
+透视：
+    近大远小
+    perspective：
+    注意点：
+        必须添加到需要呈现近大远小效果的父元素上
+-->
+<ul>
+    <li>正常的</li>
+    <li>旋转的</li>
+    <li>平移的</li>
+    <li>缩放的</li>
+    <li>综合的</li>
+</ul>
+
+
+</body>
+</html>

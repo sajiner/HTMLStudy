@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        22-盒子box-sizing</title>
+
+    <style>
+
+        .big{
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            /*border: 1px solid #000;*/
+            padding-top: 150px;
+            padding-left: 150px;
+            box-sizing: border-box;
+        }
+
+        .small{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /*margin: 150px;*/
+            /*margin: 150px auto;*/
+        }
+    </style>
+</head>
+<body>
+
+<!--
+1、CSS3 中新增了-个box-sizing属性，这个属性可以保证我们给盒子增加
+padding／border后元素宽高不变
+2、box-sizing 取值：
+    content-box：
+        元素宽高=边框+内边距+内容宽高
+    border-box：
+        元素宽高=内容宽高
+-->
+
+<div class="big">
+    <div class="small"></div>
+</div>
+
+
+</body>
+</html>

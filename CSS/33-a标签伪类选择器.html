@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        33-a标签伪类选择器</title>
+
+    <style>
+        /*a:link{*/
+            /*color: skyblue;*/
+        /*}*/
+
+        /*a:visited{*/
+            /*color: green;*/
+        /*}*/
+
+        /*a:hover{*/
+            /*color: blue;*/
+        /*}*/
+
+        /*a:active{*/
+            /*color: pink;*/
+        /*}*/
+
+        a{
+            color: green;
+        }
+
+        /*a:link{*/
+            /*color: green;*/
+        /*}*/
+
+        /*a:visited{*/
+            /*color: green;*/
+        /*}*/
+
+        a:hover{
+            color: blue;
+        }
+
+        a:active{
+            color: pink;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!--
+a标签存在一定的状态：
+    默认状态（从未被访问过）
+    被访问过状态：
+    鼠标长按状态：
+    鼠标悬停在a标签伤的状态
+
+a标签伪类选择器：专门修改状态的样式的
+
+格式：
+    a:link 修改默认状态样式
+    a:visited  被访问过状态
+    a:active    鼠标长按状态
+    a:hover    鼠标悬停在a标签伤的状态
+
+注意点：
+    1、可以单独出现，也可以一起出现
+    2、如果一起出现，有严格的顺序要求： 默认状态  被访问过状态 鼠标悬停在a标签伤的状态 鼠标长按状态
+        （love hate）原则
+    3、如果默认状态的样式和被访问过状态的样式一样，可以缩写
+
+
+ 在企业开发中，编写a标签的伪类选择器最好写在标签选择器的后边
+            和a标签盒子相关的属性都写在标签选择器中
+            和a标签文字／背景相关的写在伪类选择器中
+-->
+<a href="#">taobal0</a>
+<a href="#">jingdong</a>
+
+</body>
+</html>

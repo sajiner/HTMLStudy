@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        26-清除浮动方式</title>
+
+    <style>
+
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        /*.box1{*/
+            /*background-color: red;*/
+            /*!*height: 30px;*!*/
+        /*}*/
+
+        /*.box1 p {*/
+            /*width: 100px;*/
+            /*background-color: deepskyblue;*/
+            /**/
+        /*}*/
+
+        /*.box2{*/
+            /*background-color: forestgreen;*/
+            /*clear: both;*/
+        /*}*/
+
+        /*.box2 p{*/
+            /*width: 100px;*/
+            /*background-color: yellow;*/
+            /**/
+        /*}*/
+
+        /*p{*/
+            /*float: left;*/
+        /*}*/
+
+        /*.box1{*/
+            /*background-color: red;*/
+            /*!*margin-bottom: 10px;*!*/
+        /*}*/
+
+        /*.box1 p {*/
+            /*width: 100px;*/
+            /*background-color: deepskyblue;*/
+
+        /*}*/
+
+        /*.box2{*/
+            /*background-color: forestgreen;*/
+            /*!*margin-top: 10px;*!*/
+        /*}*/
+
+        /*.box2 p{*/
+            /*width: 100px;*/
+            /*background-color: yellow;*/
+
+        /*}*/
+
+        /*p{*/
+            /*float: left;*/
+        /*}*/
+
+        /*.wall{*/
+            /*clear: both;*/
+        /*}*/
+
+        /*.h20{*/
+            /*height: 10px;*/
+            /*!*background-color: blue;*!*/
+        /*}*/
+
+        /*.box1{*/
+            /*background-color: red;*/
+            /*!*兼容ie6*!*/
+            /**zoom: 1;*/
+        /*}*/
+
+        /*.box1 p {*/
+            /*width: 100px;*/
+            /*background-color: deepskyblue;*/
+
+        /*}*/
+
+        /*.box2{*/
+            /*background-color: forestgreen;*/
+            /*!*margin-top: 10px;*!*/
+        /*}*/
+
+        /*.box2 p{*/
+            /*width: 100px;*/
+            /*background-color: yellow;*/
+
+        /*}*/
+
+        /*p{*/
+            /*float: left;*/
+        /*}*/
+
+        /*.box1::after{*/
+            /*content: '';*/
+            /*display: block;*/
+            /*height: 0;*/
+            /*visibility: hidden;*/
+            /*clear: both;*/
+        /*}*/
+
+        .box1{
+            background-color: red;
+            overflow: hidden;
+            *zoom: 1;
+        }
+
+        .box1 p {
+            width: 100px;
+            background-color: deepskyblue;
+
+        }
+
+        .box2{
+            background-color: forestgreen;
+            /*margin-top: 10px;*/
+        }
+
+        .box2 p{
+            width: 100px;
+            background-color: yellow;
+
+        }
+
+        p{
+            float: left;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--
+标准流中内容的高度才能撑起父控件的高度
+浮动流中内容的高度不能撑起父控件的高度
+
+清除浮动方式：
+    1、给前面一个父控件设置高度（企业开发中，不建议）
+
+    2、给后面的盒子添加clear属性
+        none:默认取之，按照浮动元素的排序规则排序
+        left：不要找前边的左浮动元素
+        right：不要找前边的右浮动元素
+        both：不要找前边的左右浮动元素（使用最多）
+      注意点：
+        当给某个元素添加clear属性后，margin-top会失效(原因：父元素没有边框)
+
+    3、隔墙法：
+        外墙法：在两个盒子中间添加一个块级元素，并设置clear：both；属性
+            注意点：不可以让第一个盒子使用margin-bottom属性
+        内墙法：在第一个盒子的最后一个子元素中添加一个块级元素，并设置clear：both；属性
+            注意点：可以让第一个盒子使用margin-bottom属性
+
+        外墙法和内墙法的区别：
+            1、内墙法可以撑起第一个盒子的高度
+
+    4、伪元素选择器法
+
+    5、设置overflow:hidden;属性法
+
+overflow:hidden；
+    1、可以将超出标签范围的内容剪切掉
+    2、清除浮动
+    3、可以让里面的盒子设置了margin-top属性后，外边的盒子不会被定下来，类似与给外边的盒子设置border属性。
+
+-->
+
+<!--<div class="box1">-->
+    <!--<p>我是文字1</p>-->
+    <!--<p>我是文字1</p>-->
+    <!--<p>我是文字1</p>-->
+<!--</div>-->
+
+<!--<div class="box2">-->
+    <!--<p>我是文字2</p>-->
+    <!--<p>我是文字2</p>-->
+    <!--<p>我是文字2</p>-->
+<!--</div>-->
+
+<!--<div class="box1">-->
+    <!--<p>我是文字1</p>-->
+    <!--<p>我是文字1</p>-->
+    <!--<p>我是文字1</p>-->
+    <!--&lt;!&ndash;<div class="wall h20"></div>&ndash;&gt;-->
+<!--</div>-->
+<!--<div class="wall h20"></div>-->
+<!--<div class="box2">-->
+    <!--<p>我是文字2</p>-->
+    <!--<p>我是文字2</p>-->
+    <!--<p>我是文字2</p>-->
+<!--</div>-->
+
+
+<!--<div class="box1">-->
+    <!--<p>我是文字1</p>-->
+    <!--<p>我是文字1</p>-->
+    <!--<p>我是文字1</p>-->
+<!--</div>-->
+
+<!--<div class="box2">-->
+    <!--<p>我是文字2</p>-->
+    <!--<p>我是文字2</p>-->
+    <!--<p>我是文字2</p>-->
+<!--</div>-->
+
+<div class="box1">
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+    <p>我是文字1</p>
+</div>
+
+<div class="box2">
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+    <p>我是文字2</p>
+</div>
+
+</body>
+</html>

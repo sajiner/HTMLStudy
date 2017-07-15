@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        34-过渡模块</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        div{
+            width: 100px;
+            height: 20px;
+            background-color: red;
+            /*transition-property: width;*/
+            /*transition-duration: 10s;*/
+            transition: width 3s linear 0s;
+        }
+
+        div:last-child{
+            width: 100px;
+            height: 20px;
+            background-color: blue;
+        }
+
+        div:hover{
+            width: 300px;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--
+transition: property duration timing-function delay;
+注意：
+    和分开写一样，想给多个属性添加过渡效果也是用逗号隔开
+    2、连写时可以省略后边的两个参数，因为只要编写了前面的两个参数就已经满足了过渡的三要素
+    3、如果多个属性的运动速度、延迟时间、持续时间都一样，可以简写：transition: all 10s；
+
+-->
+<div></div>
+<div></div>
+
+
+</body>
+</html>

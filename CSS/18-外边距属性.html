@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        18-外边距属性</title>
+
+    <style>
+
+        span{
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        div{
+            height: 100px;
+            border: 1px solid #000;
+        }
+
+        .box1{
+            /*margin-top: 20px;*/
+            /*margin-right: 20px;*/
+            /*margin-bottom: 80px;*/
+            /*margin-left: 160px;*/
+            margin: 20px 40px 80px 160px;
+
+        }
+    </style>
+</head>
+<body>
+<!--
+外边距：
+    标签与标签之间的距离
+
+格式：
+2。1 非连写：
+margin-top:;
+
+
+2。2 连写：
+margin:rop right bottom left;
+
+
+注意点：
+外边距无背景颜色
+-->
+
+<span class="box1">我是span</span><span class="box2">我是span</span><span class="box3">我是span</span><div class="box4"></div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        24-网页布局方式</title>
+
+    <style>
+        /*.box1{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: red;*/
+            /*!*display: inline-block;*!*/
+            /*!* 与父元素的左边对齐 *!*/
+            /*float: left;*/
+        /*}*/
+
+        /*.box2{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: blue;*/
+            /*!*display: inline-block;*!*/
+            /*float: right;*/
+        /*}*/
+
+        /*.box3{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: red;*/
+            /*float: left;*/
+        /*}*/
+
+        /*.box4{*/
+            /*width: 150px;*/
+            /*height: 150px;*/
+            /*background-color: blue;*/
+        /*}*/
+
+        .box5{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+
+        .box6{
+            width: 150px;
+            height: 150px;
+            background-color: blue;
+            /*float: left;*/
+        }
+
+        .box7{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            float: left;
+        }
+
+        .box8{
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+网页布局方式：浏览器对网页中的元素进行排版的方式。
+
+1、标准流（文档流／普通流）排版方式
+    浏览器默认的排版方式
+    垂直排版（块级元素）和水平排版（行内元素、行内块级元素）
+    块级元素、行内元素、行内块级元素
+
+2、浮动流排版方式
+    "半脱离标准流"的排版方式
+    只有水平排版，只能设置元素左对齐／右对齐，没有居中对齐
+    不可以使用margin：0 auto；
+    不区分块级元素、行内元素、行内块级元素
+    块级元素、行内元素、行内块级元素均可以设置宽高
+    浮动流中的元素和标准流中的行内块级元素很像
+
+3、定位流排版方式
+
+-->
+
+<div class="box1"></div>
+<div class="box2"></div>
+
+<!--
+浮动元素脱标：
+    脱标：脱离标准流
+    当某一个元素浮动之后，那么这个元素看上去就像从标准流中删除一样
+
+    前面的元素浮动，后边的元素会盖住前边的元素
+
+    排序规则：
+        相同方向伤的浮动，先浮动的元素会显示在前面，后浮动显示在后面
+        不同方向上的浮动元素，左浮动会找左浮动，右浮动找右浮动
+        浮动元素浮动后的位置，由浮动元在浮动前在标准流中的位置确定
+-->
+
+<div class="box3"></div>
+<div class="box4"></div>
+
+<div class="box5">1</div>
+<div class="box6">2</div>
+<div class="box7">3</div>
+<div class="box8">4</div>
+
+<!--
+浮动元素贴靠现象
+
+浮动元素字围现象
+-->
+
+</body>
+</html>

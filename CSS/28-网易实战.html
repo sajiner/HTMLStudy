@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        28-网易实战</title>
+
+    <style>
+        <!---->
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+        {
+            margin:0;padding:0
+        }
+
+        /*利用body 设置文字大小、字体、颜色*/
+        /*清空默认样式*/
+        div{
+            margin: 0px auto;
+        }
+
+        .header{
+            width: 960px;
+            height: 80px;
+            /*background-color: red;*/
+            padding-top: 28px;
+            box-sizing: border-box;
+        }
+
+        .header .logo{
+            width: 644px;
+            height: 27px;
+            background: url("glb_v2.png");
+            float: left;
+        }
+
+        .header .logo a{
+            width: 128px;
+            height: 27px;
+            /*background-color: blue;*/
+            display: inline-block;
+        }
+
+        .header .link{
+            width: 200px;
+            height: 27px;
+            /*background-color: red;*/
+            float: right;
+            text-align: right;
+        }
+
+        .header .link a{
+            text-decoration: none;
+            font-size: 12px;
+            color: #ccc;
+            line-height: 27px;
+        }
+
+        .content{
+            width: 960px;
+            height: 600px;
+            /*background-color: green;*/
+        }
+
+        .content .top{
+            height: 38px;
+            width: 960px;
+            background-color: #5a89ba;
+            /*padding-left: 20px;*/
+            /*box-sizing: border-box;*/
+        }
+
+        .content .top p{
+            font-size: 14px;
+            color: #fcfbfb;
+            line-height: 38px;
+            text-indent: 2em;
+        }
+
+        .content .bottom{
+            width: 960px;
+            height: 562px;
+            /*background-color: red;*/
+        }
+
+        .content .article{
+            width: 642px;
+            height: 562px;
+            background-color: green;
+            float: left;
+        }
+
+        .content .aside{
+            width: 318px;
+            height: 562px;
+            background-color: pink;
+            float: right;
+
+        }
+
+        .footer{
+            width: 960px;
+            height: 48px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">
+        <a href="#" title="网易163免费邮"></a><a href="#" title="网易126免费邮"></a><a href="#" title="网易Yeah.net免费邮"></a>
+    </div>
+    <div class="link">
+        <a href="#">了解更多</a>
+        |
+        <a href="#" title="">反馈意见</a>
+    </div>
+</div>
+<div class="content">
+    <div class="top">
+        <p>欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</p>
+    </div>
+    <div class="bottom">
+        <div class="article"></div>
+        <div class="aside"></div>
+    </div>
+</div>
+<div class="footer"></div>
+
+</body>
+</html>

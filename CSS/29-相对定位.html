@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        29-相对定位</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1{
+            background-color: red;
+        }
+
+        .box2{
+            background-color: green;
+            position: relative;
+            /*top: 10px;*/
+            left: 10px;
+            right: 10px;
+        }
+
+        .box3{
+            background-color: blue;
+        }
+
+        input{
+            width: 300px;
+            height: 100px;
+            background-color: red;
+        }
+
+        img{
+            position: relative;
+            top: 270px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--
+定位流：
+    1、相对定位:相对自己以前在标准流中的位置移动
+       注意点：
+          1、不脱离标准流，会继续在标准流中占用一份空间
+          2、同一个方向上只能有一个定位属性，使用了left就不能使用right
+          3、相对定位不脱离标准流，所以区分块级、行内、行内块级元素
+          4、相对定位不脱离标准流，相对定位的元素会占用标准流的位置，所以当给相对定位元素添加margin／padding属性时，会
+          影响到标准流的布局
+        应用场景：
+            1、对元素微调
+            2、配合绝对定位使用
+            
+    2、绝对定位、
+    3、固定定位
+    4、静态定位
+-->
+
+<!--<div class="box1">-->
+
+<!--</div>-->
+<!--<div class="box2">-->
+
+<!--</div>-->
+<!--<div class="box3"></div>-->
+
+<input type="text">
+<img src="reg_master.gif"
+     alt="">
+
+</body>
+</html>

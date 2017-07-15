@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        06-继承性</title>
+    <style>
+        div{
+            color: #bda8d0;
+            font-size: 30px;
+            /*background-color: green;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+继承性：
+作用：给父元素设置一些属性，子元素也可以使用
+注意点：
+1.并不是所有的属性都可以继承，只有以color／font／text／line开头的才有继承性
+2.在css的继承中不仅仅是儿子可以继承，只要是后代都可以继承
+3.继承中的特殊性：
+    3.1 a标签的下划线和文字颜色不能继承
+    3.2 h标签的大小不能继承
+应用场景：
+一般用于设置网页上的共性信息，例如：文字颜色、字体、大小
+-->
+<div>
+    <h1>我是标题</h1>
+    <p>this is paragh</p>
+    <p>
+        <a href="#">我是超链接</a>
+    </p>
+</div>
+</body>
+</html>

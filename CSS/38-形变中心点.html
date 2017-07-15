@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        38-形变中心点</title>
+
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        ul{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        ul li{
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*
+               第一个参数：水平方向
+               第二个参数：垂直方向
+               取值方式：
+                    具体像素
+                    百分比
+                    特殊关键字：left 。。。
+            */
+            /*transform-origin: 0px 0px;*/
+            transform-origin: 50% 50%;
+        }
+
+
+        ul li:nth-child(1){
+            background-color: red;
+            transform: rotate(30deg);
+        }
+
+        ul li:nth-child(2){
+            background-color: green;
+            transform:rotate(50deg)
+        }
+
+        ul li:nth-child(3){
+            background-color: blue;
+            transform:rotate(80deg)
+
+        }
+
+    </style>
+</head>
+<body>
+
+<!--
+形变中心点:
+    默认情况，所有元素都是以自己的中心点作为参考来旋转的，可通过修改形变中心点属性来修改他的参考点
+
+
+-->
+
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+
+</body>
+</html>

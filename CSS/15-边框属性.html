@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        15-边框属性</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 200px;
+            background-color: blue;
+            /*border: 5px solid red;*/
+            border-top: 5px solid red;
+            border-right: 5px solid pink;
+        }
+
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-width: 5px 10px 15px 20px;
+            border-style: solid dashed double dotted;
+            border-color: blue pink green yellow;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+边框：环绕在标签宽度和高度周围的线条
+
+格式：
+1、连写（同时设置四条边的边框）
+border：宽度 样式 颜色
+快捷键：
+bd+  border: 1px solid #000;
+
+
+2、连写（分别设置四条边的边框）
+border-top：
+
+连写格式注意：
+1、颜色属性可以省略，默认为黑色
+2、样式不能省略
+3、宽度可以省略
+
+
+3、
+border-width: top right bottom left
+border-style:
+border-color:
+
+4、非连写（边框加属性）
+border-top-width:;
+border-top-style:;
+border-top-color: #000;
+
+-->
+ <div class="box"></div>
+
+<div class="box2"></div>
+
+
+</body>
+</html>

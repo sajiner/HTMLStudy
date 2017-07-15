@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        31-子绝父相</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 800px;
+            height: 50px;
+            margin: 0px auto;
+            margin-top: 100px;
+            background-color: red;
+        }
+
+        ul li{
+            float: left;
+            width: 100px;
+            line-height: 50px;
+            text-align: center;
+            background-color: pink;
+        }
+
+        ul li:nth-of-type(4){
+            background-color: yellow;
+            position: relative;
+        }
+
+        ul li img{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: -10px;
+            /*left: 40px;*/
+
+            /*设置水平居中*/
+            left: 50%;
+            margin-left: -10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>何鲁丽</li>
+    <li>美妆馆</li>
+    <li>京东超市</li>
+    <li>全求后
+        <img src="qq.jpeg">
+    </li>
+    <li>傻某</li>
+    <li>图案都</li>
+    <li>今日</li>
+    <li>网易的</li>
+</ul>
+
+</body>
+</html>
